@@ -1,6 +1,9 @@
-# 1.1 Randomize
+# 1.2 Local Configuration
 
 ##Blocks in this branch
 
-- Added a random element to the `PondController`
-- Added catch probability to `PondControlelr`
+- The random element to `PondController` is now defined in the `application.properties` file
+
+
+##Note
+There are many different ways to inject configuration variables into an application.
