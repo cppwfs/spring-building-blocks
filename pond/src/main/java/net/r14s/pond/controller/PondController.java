@@ -18,8 +18,8 @@ public class PondController {
 
 	private static final Random RANDOM = new Random();
 
-	@Value("${FISHING_CATCH_PROBABILITY}")
-	private Integer CATCH_PROBABILITY;
+	@Value("${fishing.catch.probability}")
+	private Integer catchProbability;
 
 	private static Logger logger = LoggerFactory.getLogger(PondController.class);
 
@@ -27,8 +27,8 @@ public class PondController {
 	public Fish goFish() {
 		int catchResult = RANDOM.nextInt(100);
 		logger.info("fish number = " + catchResult);
-		if(catchResult < CATCH_PROBABILITY) {
-			return new Fish("Catfish", 2.4);
+		if(catchResult < catchProbability) {
+			return new Fish("Catfish", catchResult/10D);
 		}
 		return null;
 	}
